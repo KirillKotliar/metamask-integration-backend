@@ -6,6 +6,7 @@ Default envs is fine for quick dev check. No need to create .env file.
 ```
 npm i && npm run dev
 ```
+Endpoints `http://localhost:3038`. Swagger `http://localhost:3038/docs/`
 
 ## Check lint and tsc build
 ```
