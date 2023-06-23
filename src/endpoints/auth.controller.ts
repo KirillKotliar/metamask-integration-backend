@@ -21,8 +21,8 @@ export class AuthController {
     if (existedUser) {
       throw new HttpException('User already exists', 400)
     }
-    const existedUser2 = await this.userService.getUserByUsername(body.username)
-    if (existedUser2) {
+    const existedSameUsername = await this.userService.getUserByUsername(body.username)
+    if (existedSameUsername) {
       throw new HttpException('Username already exists', 400)
     }
     const user = await this.userService.createUser({ ethAddress: address, username: body.username })
